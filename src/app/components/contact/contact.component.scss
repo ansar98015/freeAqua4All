@@ -1,0 +1,76 @@
+@mixin flex($justify:flex-start, $align:stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.contact-sec{
+    @include flex(space-between);
+    margin: 5rem 10rem;
+}
+
+.cont-title,
+.getTouch-title{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.touchBtn{
+    @include flex(center, center);
+    width: 12rem;
+    padding-block: 0.7rem;
+    background-color: var(--primaryColor);
+    gap: 0.5rem;
+    border-radius: 50px;
+    padding-inline: 1.5rem;
+    cursor: pointer;
+
+    img{
+        width: 1.5rem;
+        filter: invert(1);
+    }
+
+    .touch-text{
+        color: white;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    &:hover{
+        background-color: var(--secondColor);
+        box-shadow: 0px 0px 5px grey;
+    }
+}
+
+.getTouch-body{
+    height: 31vh;
+    @include flex(center, center);
+}
+
+.cont-body{
+    height: 31vh;
+    @include flex(space-around);
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.econt-mail{
+    @include flex();
+    gap: 0.5rem;
+    color: grey;
+    img{
+        width: 1.1rem;
+        filter: opacity(0.5);
+    }
+}
+
+.econt-Whatsapp{
+    img{
+        width: 9rem;
+    }
+
+    .Whatsapp-text{
+        color: grey;
+    }
+}

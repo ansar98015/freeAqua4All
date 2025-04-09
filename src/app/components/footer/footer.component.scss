@@ -1,0 +1,88 @@
+.footer-comp{
+    // width: 100vw;
+    background: black;
+    color: white;
+}
+
+.footer-body{
+    height: 100%;
+    display: flex;
+    padding-inline: 5rem;
+}
+
+.about, .social{
+    height: 100%;
+    width: 50%;
+}
+
+.copyRight-div{
+    background: #0C0C0C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    border-top: 1px solid #494949;
+}
+
+.developerName{
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.about-title, .social-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1.3rem;
+}
+
+.about-body{
+    text-align: center;
+    line-height: 1.4;
+    padding-block: 3rem;
+}
+
+.social-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21vh;
+}
+
+.follow-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.icon-div{
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.facebook{
+    background-color: #316FF6;
+}
+
+.pi{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2rem;
+    width: 2rem;
+    filter: brightness(0) saturate(100%) invert(1);
+    background-position: center;
+}
+
+.pi-facebook{
+    background-image: url('../../../assets/icons/facebook-brands.svg');
+}
+
+.instagram{
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.pi-instagram{
+    background-image: url('../../../assets/icons/instagram-brands.svg');
+}

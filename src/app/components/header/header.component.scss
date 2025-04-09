@@ -1,0 +1,62 @@
+.header-comp{
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: lavender;
+}
+
+.hcontain-wrapper{
+    width: 87%;
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+.title{
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    .free, .aqua, .for, .all{
+        font-family: cursive !important;
+    }
+}
+
+.aqua, .for{
+    font-weight: 600;
+    color: var(--primaryColor);
+}
+
+.tabs{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    gap: 3.5rem;
+}
+
+.tab:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    // &:hover{
+    //     transition: text-decoration 2s;
+    // }
+}
+
+.touch{
+    height: 100%;
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    background: var(--primaryColor);
+    color: white;
+    cursor: pointer;
+
+    &:hover{
+        font-size: 1.2rem;
+        background: var(--secondColor)
+    }
+}

@@ -1,0 +1,200 @@
+@mixin flex($justify:flex-start, $align:stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.company-group{
+    @include flex(space-between, center);
+    border: 1px solid grey;
+}
+
+.company{
+    height: 21vh;
+    width: 19%;
+    @include flex(center, center);
+    border-right: 1px solid grey;
+}
+
+.company:last-child{
+    border-right: none;
+}
+
+.icon-group{
+    @include flex(center, center);
+    gap: 13rem;
+
+    .icon-panel{
+        margin-block: 6rem;
+    }
+}
+
+.iconlogo{
+    @include flex(center, center);
+    flex-direction: column;
+}
+
+.img-div{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    height: 15rem;
+    width: 15rem;
+    @include flex(center, center);
+    transition: background-color 1s;
+    img{
+        height: 51%;
+        width: 51%;
+        transition: filter 0.5s;
+    }
+
+    &:hover {
+        background-color: var(--primaryColor);
+
+        img {
+            filter: invert(1);
+        }
+    }
+}
+
+.icon-title{
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.icon-subTitle{
+    color: grey;
+}
+
+.front-section{
+    height: 89vh;
+    @include flex();
+    position: relative;
+    width: 100%;
+}
+
+.front-right{
+    width: 100%;
+    .front-img{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.front-left{
+    position: absolute;
+    @include flex(center, center);
+    flex-direction: column;
+    top: 50%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    gap: 2rem;
+}
+
+.colab{
+    font-size: 2.1rem;
+    font-weight: 700;
+    background-color: var(--primaryColor);
+    padding: 2rem;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Atlassian Sans';
+    letter-spacing: 1px;
+}
+
+.colab-btn{
+    min-width: 12rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: white;
+    background-color: var(--secondColor);
+    border: none;
+    border-radius: 50px;
+    opacity: 0.8;
+
+    &:hover{
+        opacity: 1; 
+    }
+}
+
+.getintouch-section{
+    @include flex(center, center);
+    flex-direction: column;
+    padding-inline: 5rem;
+    padding-bottom: 5rem;
+    gap: 2.5rem;
+}
+
+.touchBtn{
+    @include flex(center, center);
+    min-width: 12rem;
+    padding-block: 0.7rem;
+    background-color: var(--primaryColor);
+    gap: 0.5rem;
+    border-radius: 50px;
+    padding-inline: 1.5rem;
+    cursor: pointer;
+
+    img{
+        width: 1.5rem;
+        filter: invert(1);
+    }
+
+    .touch-text{
+        color: white;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    &:hover{
+        background-color: var(--secondColor);
+        box-shadow: 0px 0px 5px grey;
+    }
+}
+
+.quote-text{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.quote-title{
+    margin-bottom: 1rem; 
+}
+
+.adv-section{
+    @include flex(center);
+    gap: 10rem;
+    margin-bottom: 5rem;
+    .advImage{
+        height: 77vh;
+        width: 29vw;
+        border-radius: 37%;
+    }
+
+    .advTxt-title{
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+    }
+
+    .advTxt-body{
+        line-height: 1.5;
+        color: grey;
+        font-size: 1.3rem;
+        width: 41vw;
+    }
+
+    .punch-line{
+        margin-bottom: 4rem;
+        margin-top: 5rem;
+    }
+}
+
+.charity-sec{
+    height: 67vh;
+}
