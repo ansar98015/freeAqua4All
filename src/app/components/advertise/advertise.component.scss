@@ -1,0 +1,105 @@
+@mixin flex($justify:flex-start, $align:stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.advDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.advtitle {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.advDetilsItems {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.advDetilsItems:hover {
+    transform: translateY(-5px);
+}
+
+.img-div{
+    @include flex(center, center);
+    img{
+        height: 9rem;
+        filter: invert(58%) sepia(98%) saturate(1048%) hue-rotate(172deg) brightness(102%) contrast(101%);
+    }
+}
+
+.advImg{
+    padding-block: 3rem;
+    .advimg-div{
+        @include flex(center, center);
+        background-color: #d84f7d;
+        img{
+            height: 69vh;
+        }
+    }
+}
+
+.getTouch-sec{
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.touchBtn{
+    @include flex(center, center);
+    width: 12rem;
+    padding-block: 0.7rem;
+    background-color: var(--primaryColor);
+    gap: 0.5rem;
+    border-radius: 50px;
+    padding-inline: 1.5rem;
+    cursor: pointer;
+
+    img{
+        width: 1.5rem;
+        filter: invert(1);
+    }
+
+    .touch-text{
+        color: white;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    &:hover{
+        background-color: var(--secondColor);
+        box-shadow: 0px 0px 5px grey;
+    }
+}
+
+.getTouch-title{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .advDetails {
+        grid-template-columns: 1fr;
+    }
+
+    .advtitle {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    
+}

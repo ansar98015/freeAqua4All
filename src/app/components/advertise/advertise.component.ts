@@ -13,4 +13,7 @@ export class AdvertiseComponent implements OnInit {
   ngOnInit() {
   }
 
+  getaQuote(){
+    window.open('https://forms.gle/9bdafmHbrnwtWRny7', '_blank');
+  }
 }

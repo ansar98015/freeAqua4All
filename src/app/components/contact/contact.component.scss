@@ -74,3 +74,13 @@
         color: grey;
     }
 }
+
+@media(max-width:768px){
+    .contact-sec{
+        @include flex(space-between, center);
+        margin: 5rem 10rem;
+        flex-direction: column;
+        margin: 1rem 1rem;
+        gap: 3rem;
+    }
+}
