@@ -1,5 +1,15 @@
 <div class="header-comp">
   <div class="hcontain-wrapper">
+    <div class="sidebarIcon" (click)="toggleSidebar()">
+      <img src="../../../assets/icons/bars-solid.svg">
+    </div>
+    <div [class.open]="sidebar" class="sidebar">
+      <div class="top" (click)="toggleSidebar()">X <span class="sidebarTitle">freeAqua4All</span></div>
+      <div class="navs" (click)="tabClicked('home')">Home</div>
+      <div class="navs" (click)="tabClicked('adv')">Advertise</div>
+      <div class="navs" (click)="tabClicked('faq')">FAQs</div>
+      <div class="navs" (click)="tabClicked('cont')">Contacts</div>
+    </div>
     <div class="title">
       <span class="free">free</span>
       <span class="aqua">Aqua</span>

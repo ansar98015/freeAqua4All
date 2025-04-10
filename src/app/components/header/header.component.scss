@@ -60,3 +60,68 @@
         background: var(--secondColor)
     }
 }
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: var(--primaryColor);
+    width: 100vw;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.navs{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebarIcon{
+    margin-left: 2rem;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    img{
+        width: 1rem;
+    }
+}
+
+.top{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebarTitle{
+    margin-left: 1rem;
+    font-family: cursive !important;
+}
+
+@media(max-width:768px){
+    .sidebarIcon{
+        display: block;
+    }
+
+    .tabs{
+        display: none;
+    }
+
+    .hcontain-wrapper{
+        width: auto;
+    }
+    
+    .touch{
+        display: none;
+    }
+}

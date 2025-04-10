@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   standalone: true,
 })
 export class HeaderComponent implements OnInit {
+  sidebar:boolean = false;
 
   constructor( private router: Router) { }
 
@@ -42,5 +43,10 @@ export class HeaderComponent implements OnInit {
         break;
       default:
     }
+    this.toggleSidebar();
+  }
+
+  toggleSidebar() {
+    this.sidebar = !this.sidebar;
   }
 }
