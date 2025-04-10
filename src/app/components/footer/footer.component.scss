@@ -6,13 +6,15 @@
 
 .footer-body{
     height: 100%;
-    display: flex;
+    display: grid;
     padding-inline: 5rem;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
 .about, .social{
     height: 100%;
-    width: 50%;
+    // width: 50%;
 }
 
 .copyRight-div{
@@ -85,4 +87,10 @@
 
 .pi-instagram{
     background-image: url('../../../assets/icons/instagram-brands.svg');
+}
+
+@media(max-width: 768px){
+    .footer-body{
+        grid-template-columns: 1fr;
+    }
 }
