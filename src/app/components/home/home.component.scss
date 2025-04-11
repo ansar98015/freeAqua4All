@@ -5,15 +5,15 @@
 }
 
 .company-group{
-    @include flex(space-between, center);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     border: 1px solid grey;
 }
 
 .company{
     height: 21vh;
-    width: 19%;
     @include flex(center, center);
-    border-right: 1px solid grey;
+    border: 1px solid grey;
 }
 
 .company:last-child{
@@ -21,12 +21,11 @@
 }
 
 .icon-group{
-    @include flex(center, center);
-    gap: 13rem;
-
-    .icon-panel{
-        margin-block: 6rem;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 6rem;
+    margin-inline: 9rem;
+    row-gap: 4rem;
 }
 
 .iconlogo{
@@ -167,9 +166,10 @@
 }
 
 .adv-section{
-    @include flex(center);
-    gap: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 5rem;
+    justify-items: center;
     .advImage{
         height: 77vh;
         width: 29vw;
@@ -195,6 +195,66 @@
     }
 }
 
-.charity-sec{
-    height: 67vh;
+@media(max-width:768px){
+    .icon-group{
+        grid-template-columns: 1fr;
+        margin: 0;
+        row-gap: 1.5rem;
+    }
+
+    .adv-section{
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+        margin-top: 5rem;
+        .advImage{
+            height: 57vh;
+            width: 100vw;
+            border-radius: 0;
+        }
+
+        .advTxt-body{
+            width: calc(100vw - 4rem);
+            padding-inline: 2rem;
+            text-align: center;
+        }
+
+        .advTxt-title{
+            font-size: 1.7rem;
+            text-align: center;
+        }
+    }
+
+    .front-left{
+        left: 30%;
+    }
+
+    .colab{
+        text-align: center;
+        background-color: transparent;
+        text-shadow: 2px 2px 4px black;
+    }
+
+    .img-div{
+        height: 9rem;
+        width: 9rem;
+    }
+
+    .icon-title{
+        margin-top: 1.5rem;
+    }
+
+    .company-group{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 3rem;
+    }
+
+    .company:last-child{
+        border-right: 1px solid grey;
+    }
+
+    .front-right{
+        .front-img{
+            object-fit: cover;
+        }
+    }
 }
