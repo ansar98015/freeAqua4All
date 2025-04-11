@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     window.open('https://forms.gle/FvLWJmxyqFiu4RgTA', '_blank');
   }
   
-  tabClicked(type:string){
+  tabClicked(type:string, frm = false){
     switch (type) {
       case 'home':
         this.router.navigate(['home'], {
@@ -43,7 +43,7 @@ export class HeaderComponent implements OnInit {
         break;
       default:
     }
-    this.toggleSidebar();
+    if(frm)this.toggleSidebar();
   }
 
   toggleSidebar() {
