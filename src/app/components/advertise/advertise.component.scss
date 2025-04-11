@@ -44,7 +44,7 @@
     padding-block: 3rem;
     .advimg-div{
         @include flex(center, center);
-        background-color: #d84f7d;
+        background-color: #CDC5B5;
         img{
             height: 69vh;
         }
@@ -99,7 +99,16 @@
 
     .advtitle {
         font-size: 1.5rem;
-        text-align: left;
+        text-align: center;
+    }
+
+    .advImg{
+        .advimg-div{
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
     }
     
 }

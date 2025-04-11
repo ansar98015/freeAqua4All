@@ -41,6 +41,10 @@ export class FaqsComponent implements OnInit {
       description: "freeAqua4All offers a **unique, high-visibility** advertising solution compared to traditional mediums like billboards, digital ads, or print media. Here's how it stands out: *Direct Consumer Engagement:** Your brand reaches consumers in a **tangible way** as they hold and drink from branded water bottles. *Higher Retention:** Unlike fleeting digital ads, your branding stays visible for **several minutes** while the consumer drinks the water. *Cost-Effective:** Compared to billboards or TV ads, water bottle advertising provides **affordable, widespread exposure** with **less ad fatigue**. **Targeted Distribution:** You can place bottles at **strategic locations** (events, offices, gyms, public areas) to reach the **right audience**. *Eco-Friendly Image:** Associating with drinking water enhances your brand's **social responsibility** and goodwill."
     },
     {
+      title: "Does Free Aqua for All distribute customized water bottles?",
+      description: "Yes, we do provide that service. You just need to pay the bottle manufacturing and transportation costs."
+    },
+    {
       title: "How do I advertise?",
       description: "To advertise with freeAqua4All, please visit https://freeAqua4All.com"
     }
